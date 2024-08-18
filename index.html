@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/encrypted.ico"/>
+    <link rel="stylesheet" href="css/estilo.css">
+    <meta name="description" content="¡Bienvenido a tu plataforma de confianza! Pensando en tu seguridad, creamos la forma más rápida, fácil y segura de renovar tu seguro online">
+    <title>Inicio | Seguros Transportes</title>
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html">
+            <img class="img-seguros" src="img/encrypted.png" alt="logoseguros">
+        </a>
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>   
+        <div id="nombre-usuario" class="nombre-usuario"></div>
+    </header>
+
+    <!-- Popup para ingresar número de usuarios -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>¡Bienvenido!</h2>
+            <p id="error-message">¿Cuántos usuarios deseas crear?</p>
+            <input type="number" id="num-usuarios" placeholder="Ej: 2" min="1">
+            <button id="submit-num-usuarios" class="submit-name">Enviar</button>
+        </div>
+    </div>
+
+    <!-- Popup para ingresar nombre de usuarios -->
+    <div id="usuario-popup" class="popup" style="display:none;">
+        <div class="popup-content">
+            <h2>Crear usuario</h2>
+            <p id="usuario-error-message">Por favor, ingresa el nombre del usuario:</p>
+            <input type="text" id="nombre-usuario-input" placeholder="Ej: Pepito Perez">
+            <button id="submit-usuario" class="submit-name">Crear Usuario</button>
+        </div>
+    </div>
+
+    <!-- Popup para verificar usuario -->
+    <div id="verificar-popup" class="popup" style="display:none;">
+        <div class="popup-content">
+            <h2>Verificar usuario</h2>
+            <p id="verificar-error-message">Ingresa el nombre del usuario para verificar:</p>
+            <input type="text" id="nombre-verificar" placeholder="Ej: Pepito Perez">
+            <button id="submit-verificar" class="submit-name">Verificar Usuario</button>
+        </div>
+    </div>
+
+    <!--Ccomprar seguro -->
+    <div id="insurance-section" class="insurance-section" style="display:none;">
+        <h2>Seleccione el seguro que desea comprar</h2>
+
+        <!-- Combobox para seleccionar el usuario que comprara-->
+        <label for="select-usuario">Selecciona el usuario:</label>
+        <select id="select-usuario">
+
+        </select>
+        <form id="insurance-form">
+            <label for="vehicle-type">Tipo de vehículo:</label>
+            <select id="vehicle-type">
+                <option value="automovil">Automóvil</option>
+                <option value="moto">Moto</option>
+            </select>
+            <button type="submit" class="submit-insurance">Comprar Seguro</button>
+        </form>
+        <div id="total"></div>
+        <!-- compras realizadas -->
+        <div id="compras">
+            <!-- las compras se deben de ir añadiendo aqui -->
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
